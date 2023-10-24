@@ -49,9 +49,9 @@ std::
         AT_ERROR("xys must have dimensions (N, 2)");
     }
 
-    if (colors.ndimension() != 2) {
-        AT_ERROR("colors must have dimensions (N, 3)");
-    }
+    // if (colors.ndimension() != 2) {
+    //     AT_ERROR("colors must have dimensions (N, 3)");
+    // }
 
     const int channels = 512;
     const int num_points = xys.size(0);
@@ -191,9 +191,9 @@ std::
         AT_ERROR("xys must have dimensions (N, 2)");
     }
 
-    if (colors.ndimension() != 2 || colors.size(1) != 3) {
-        AT_ERROR("colors must have dimensions (N, 3)");
-    }
+    // if (colors.ndimension() != 2 || colors.size(1) != 3) {
+    //     AT_ERROR("colors must have dimensions (N, 3)");
+    // }
 
     const int channels = 512;
     const int num_points = xys.size(0);

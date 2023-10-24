@@ -94,10 +94,10 @@ torch::Tensor compute_sh_backward_tensor(
         viewdirs.size(1) != 3) {
         AT_ERROR("viewdirs must have dimensions (N, 3)");
     }
-    if (v_colors.ndimension() != 2 || v_colors.size(0) != num_points ||
-        v_colors.size(1) != 3) {
-        AT_ERROR("v_colors must have dimensions (N, 3)");
-    }
+    // if (v_colors.ndimension() != 2 || v_colors.size(0) != num_points ||
+    //     v_colors.size(1) != 3) {
+    //     AT_ERROR("v_colors must have dimensions (N, 3)");
+    // }
     unsigned num_bases = num_sh_bases(degree);
     torch::Tensor v_coeffs =
         torch::empty({num_points, num_bases, 3}, v_colors.options());
